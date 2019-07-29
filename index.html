@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>clock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+
+</head>
+<body>
+    <script src="TClock.js"></script>
+    <script src="TClockViewSVG.js"></script>
+    <script src="TClockViewDOM.js"></script>
+    <script src="TClockViewCANVAS.js"></script>
+    <script src="TClockControllerButtons.js"></script>
+    <script>
+        const model1 = new TClock(-4);
+        const view1 = new TClockViewSVG(document.body, 'New York');
+        const controller1 = new TClockControllerButtons(model1, view1);
+        const model2 = new TClock(+1);
+        const view2 = new TClockViewDOM(document.body, 'London');
+        const controller2 = new TClockControllerButtons(model2, view2);
+        const model3 = new TClock(+2);
+        const view3 = new TClockViewCANVAS(document.body, 'Berlin');
+        const controller3 = new TClockControllerButtons(model3, view3);
+        var div = document.createElement('div');
+        document.body.appendChild(div);
+        const model4 = new TClock(+3);
+        const view4 = new TClockViewSVG(document.body, 'Minsk');
+        const controller4 = new TClockControllerButtons(model4, view4);
+        const model5 = new TClock(+9);
+        const view5 = new TClockViewDOM(document.body, 'Tokyo'); 
+        const controller5 = new TClockControllerButtons(model5, view5);
+        const model6 = new TClock(+10);
+        const view6 = new TClockViewCANVAS(document.body, 'Vladivostok'); 
+        const controller6 = new TClockControllerButtons(model6, view6);
+    </script>
+</body>
+</html>
